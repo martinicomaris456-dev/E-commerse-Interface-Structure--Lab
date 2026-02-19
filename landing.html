@@ -1,42 +1,90 @@
-Products.html
-Html
-Copy code
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shepu DRINKS - Products</title>
+    <title>Shepu DRINKS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* LIGHT PINK THEME */
+        body {
+            background-color: #ffe6f0; /* soft light pink background */
+            font-family: Arial, sans-serif;
+            color: #660033; /* dark rose for general text */
+        }
+
+        header {
+            background-color: #ffb6c1; /* light pink header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #cc0066; /* dark pink heading */
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #660033; /* dark rose links */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff66a3; /* medium pink hover */
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-color: #fff0f5; /* very soft pink hero section */
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .hero h2 {
+            color: #cc0066; /* dark pink heading */
+        }
+
+        .hero p {
+            color: #660033; /* dark rose paragraph */
+            margin: 10px 0 20px;
+        }
+
+        button {
+            background-color: #ff99cc; /* pink button */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff66b2; /* darker pink hover */
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Our Products</h1>
+    <h1>Shepu DRINKS</h1>
+    <nav>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="account.html">Account</a>
+    </nav>
 </header>
 
-<aside>
-    <h2>Filter</h2>
-    <form>
-        <label><input type="checkbox"> Fruit Juice</label><br>
-        <label><input type="checkbox"> Energy Drink</label><br>
-        <label><input type="radio" name="price"> Low to High</label><br>
-        <label><input type="radio" name="price"> High to Low</label>
-    </form>
-</aside>
-
-<main>
-    <article>
-        <img src="mango.jpg" alt="Mango Juice" width="150">
-        <h3>Mango Fresh Juice</h3>
-        <p>₱120</p>
-        <a href="detail.html">View Details</a>
-    </article>
-
-    <article>
-        <img src="lemon.jpg" alt="Lemon Drink" width="150">
-        <h3>Lemon Coolers</h3>
-        <p>₱90</p>
-        <a href="detail.html">View Details</a>
-    </article>
-</main>
+<section class="hero">
+    <h2>Fresh & Healthy Drinks</h2>
+    <p>Natural refreshment made for you.</p>
+    <button onclick="location.href='products.html'">Shop Now</button>
+</section>
 
 </body>
 </html>

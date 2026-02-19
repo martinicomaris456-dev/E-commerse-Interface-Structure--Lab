@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account - Shepu DRINKS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* LIGHT PINK THEME */
+        body {
+            background-color: #ffe6f0; /* soft pink background */
+            font-family: Arial, sans-serif;
+            color: #660033; /* dark rose text */
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #ffb6c1; /* light pink header */
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        header h1 {
+            color: #cc0066; /* dark pink heading */
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #660033; /* dark rose links */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff66a3; /* medium pink hover */
+            text-decoration: underline;
+        }
+
+        section {
+            margin-top: 30px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        details {
+            background-color: #fff0f5; /* very soft pink */
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ffb6c1;
+        }
+
+        summary {
+            font-weight: bold;
+            color: #cc0066; /* dark pink summary */
+            cursor: pointer;
+        }
+
+        details p {
+            margin-top: 10px;
+            color: #660033; /* dark rose for order text */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            section {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome, Customer</h1>
+    <nav>
+        <a href="#">Orders</a>
+        <a href="#">Profile</a>
+        <a href="#">Wishlist</a>
+    </nav>
+</header>
+
+<section>
+    <details>
+        <summary>Order #001</summary>
+        <p>Mango Fresh Juice - ₱120</p>
+    </details>
+    <details>
+        <summary>Order #002</summary>
+        <p>Lemon Cooler - ₱90</p>
+    </details>
+</section>
+
+</body>
+</html>

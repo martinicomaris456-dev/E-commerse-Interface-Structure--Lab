@@ -1,23 +1,74 @@
-signup.html
-Html
-Copy code
 <!DOCTYPE html>
 <html>
 <head>
     <title>Sign Up - Shepu DRINKS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* LIGHT PINK THEME */
+        body {
+            background-color: #ffe6f0; /* soft light pink background */
+            font-family: Arial, sans-serif;
+            color: #660033; /* dark rose text */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #cc0066; /* dark pink heading */
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #fff0f5; /* very soft pink form background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        input[type="email"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cc0066;
+            border-radius: 8px;
+        }
+
+        input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #ff66a3;
+            outline: none;
+            box-shadow: 0 0 5px #ffb6c1;
+        }
+
+        button {
+            background-color: #ff99cc; /* pink button */
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff66b2; /* darker pink on hover */
+        }
+    </style>
 </head>
 <body>
 
 <h1>Create Account</h1>
 
 <form>
-    <label>Email:</label>
-    <input type="email" required><br>
-
-    <label>Password:</label>
-    <input type="password" required><br>
-
-    <button type="submit">Sign Up</button>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Password" required>
+    <button>Sign Up</button>
 </form>
 
 </body>

@@ -1,10 +1,88 @@
-checkout.html
-Html
-Copy code
 <!DOCTYPE html>
 <html>
 <head>
     <title>Checkout - Shepu DRINKS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* LIGHT PINK THEME */
+        body {
+            background-color: #ffe6f0; /* soft pink background */
+            font-family: Arial, sans-serif;
+            color: #660033; /* dark rose text */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #cc0066; /* dark pink heading */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            background-color: #fff0f5; /* very soft pink */
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        legend {
+            color: #cc0066;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #cc0066;
+        }
+
+        label {
+            color: #660033;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        aside {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        aside p {
+            font-size: 1.2em;
+            color: #cc0066;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #ff99cc; /* pink button */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff66b2; /* darker pink on hover */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            fieldset {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -13,25 +91,18 @@ Copy code
 <section>
     <fieldset>
         <legend>Shipping Address</legend>
-        <label>Name:</label>
-        <input type="text"><br>
-        <label>Street:</label>
-        <input type="text"><br>
-        <label>Zip Code:</label>
-        <input type="text">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Street">
+        <input type="text" placeholder="Zip Code">
     </fieldset>
 </section>
 
 <section>
-    <h2>Payment Method</h2>
-    <form>
-        <label><input type="radio" name="payment"> Credit Card</label><br>
-        <label><input type="radio" name="payment"> PayPal</label>
-    </form>
+    <label><input type="radio" name="pay"> Credit Card</label>
+    <label><input type="radio" name="pay"> PayPal</label>
 </section>
 
 <aside>
-    <h3>Order Summary</h3>
     <p>Total: ₱120</p>
     <button>Place Order</button>
 </aside>

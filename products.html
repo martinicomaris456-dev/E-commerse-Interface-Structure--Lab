@@ -1,39 +1,131 @@
-Products.html
-Html
-Copy code
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shepu DRINKS - Products</title>
+    <title>Products - Shepu DRINKS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* LIGHT PINK THEME */
+        body {
+            background-color: #ffe6f0; /* soft light pink background */
+            font-family: Arial, sans-serif;
+            color: #660033; /* dark rose text */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ffb6c1; /* light pink header */
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #cc0066; /* dark pink heading */
+        }
+
+        aside {
+            background-color: #fff0f5; /* very soft pink sidebar */
+            padding: 15px;
+            width: 200px;
+            float: left;
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        aside label {
+            color: #660033;
+        }
+
+        main {
+            margin-left: 240px; /* leave space for sidebar */
+            padding: 15px;
+        }
+
+        article {
+            display: inline-block;
+            width: 260px;
+            background-color: #ffdde8; /* soft pink card */
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            vertical-align: top;
+            transition: 0.3s;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+        }
+
+        article img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        h3 {
+            color: #cc0066; /* product title dark pink */
+        }
+
+        .price::before {
+            content: "₱ ";
+            color: #660033;
+        }
+
+        a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ff66a3; /* medium pink hover */
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            main {
+                margin-left: 0;
+            }
+            aside {
+                width: 90%;
+                margin: 10px auto;
+                float: none;
+            }
+            article {
+                width: 90%;
+                display: block;
+                margin: 15px auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Our Products</h1>
+    <h1>Our Drinks</h1>
 </header>
 
 <aside>
-    <h2>Filter</h2>
     <form>
         <label><input type="checkbox"> Fruit Juice</label><br>
         <label><input type="checkbox"> Energy Drink</label><br>
-        <label><input type="radio" name="price"> Low to High</label><br>
-        <label><input type="radio" name="price"> High to Low</label>
+        <label><input type="radio" name="sort"> Low to High</label><br>
+        <label><input type="radio" name="sort"> High to Low</label>
     </form>
 </aside>
 
 <main>
     <article>
-        <img src="mango.jpg" alt="Mango Juice" width="150">
+        <img src="images/mango.jpg" alt="Mango Juice">
         <h3>Mango Fresh Juice</h3>
-        <p>₱120</p>
+        <p class="price">120</p>
         <a href="detail.html">View Details</a>
     </article>
 
     <article>
-        <img src="lemon.jpg" alt="Lemon Drink" width="150">
-        <h3>Lemon Coolers</h3>
-        <p>₱90</p>
+        <img src="images/lemon.jpg" alt="Lemon Drink">
+        <h3>Lemon Cooler</h3>
+        <p class="price">90</p>
         <a href="detail.html">View Details</a>
     </article>
 </main>
