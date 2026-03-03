@@ -1,30 +1,38 @@
-account.html
-Html
-Copy code
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Account - Shepu DRINKS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shepu Juice - Account</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;}
+.container{width:90%;margin:auto;}
+.account-box{background:white;padding:25px;margin:40px 0;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
+button{padding:12px 25px;border:none;border-radius:30px;background:#0a7f5a;color:white;font-weight:bold;cursor:pointer;transition:0.3s;}
+button:hover{background:#065f45;}
+</style>
 </head>
 <body>
+<div class="container">
+<div class="account-box" id="account-box"></div>
+</div>
 
-<header>
-    <h1>Welcome, Customer</h1>
-    <nav>
-        <a href="#">Order History</a> |
-        <a href="#">Profile Settings</a> |
-        <a href="#">Wishlist</a>
-    </nav>
-</header>
-
-<section>
-    <h2>Previous Orders</h2>
-
-    <details>
-        <summary>Order #001</summary>
-        <p>Mango Fresh Juice - ₱120</p>
-    </details>
-</section>
-
+<script>
+const user=JSON.parse(localStorage.getItem('loggedInUser'));
+const box=document.getElementById('account-box');
+if(user){
+  box.innerHTML=`<h2>Welcome, ${user.username}</h2>
+  <p>Email: ${user.email}</p>
+  <button onclick="logout()">Logout</button>`;
+}else{
+  alert('Please login first!');
+  location.href='login.html';
+}
+function logout(){
+  localStorage.removeItem('loggedInUser');
+  alert('Logged out!');
+  location.href='index.html';
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shepu Juice - Sign Up</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f4f4f4;margin:0;}
+.container{width:90%;margin:auto;}
+form{background:white;padding:25px;margin:40px 0;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.08);}
+input{width:100%;padding:10px;margin:10px 0;border-radius:8px;border:1px solid #ccc;}
+button{padding:12px 25px;border:none;border-radius:30px;background:#0a7f5a;color:white;font-weight:bold;cursor:pointer;transition:0.3s;}
+button:hover{background:#065f45;}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Sign Up</h2>
+<form id="signup-form">
+  <input type="text" id="username" placeholder="Username" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button type="submit">Sign Up</button>
+</form>
+</div>
+
+<script>
+document.getElementById('signup-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const username=document.getElementById('username').value;
+  const email=document.getElementById('email').value;
+  const password=document.getElementById('password').value;
+  let users=JSON.parse(localStorage.getItem('users')||'[]');
+  if(users.find(u=>u.email===email)){ alert('Email already registered!'); return; }
+  users.push({username,email,password});
+  localStorage.setItem('users',JSON.stringify(users));
+  alert('Sign Up Successful!');
+  location.href='login.html';
+});
+</script>
+</body>
+</html>
